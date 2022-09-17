@@ -1,17 +1,16 @@
-var indexRouter = require('./home.routes');
-var usersRouter = require('./users.routes');
-
+const indexRouter = require('./home.routes');
+const usersRouter = require('./users.routes');
 
 /**
  * Will define routes at one place for Express Application
- * @param {Express Application} app 
+ * @param {Express Application} app
  * @returns Express Application
  */
 const defineRoutes = (app) => {
   app.use('/', indexRouter);
   app.use('/users', usersRouter);
 
-  return app
-}
+  return app;
+};
 
-module.exports = defineRoutes
+module.exports = defineRoutes;
